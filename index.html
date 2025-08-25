@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/bookmark.png"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container main-container">
+      <div class="app-header">
+        <h1><i class="fas fa-bookmark me-2"></i>Bookmark Manager</h1>
+        <p>An advanced tool for saving and managing your favorite websites</p>
+      </div>
+
+      <div class="form-section">
+        <h2 class="mb-4"
+          ><i class="fas fa-plus-circle me-2"></i>Add New Website</h2
+        >
+        <form id="bookmarkForm">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="bookmarkName" class="form-label">Website Name</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookmarkName"
+                  placeholder="Enter website name"
+                />
+                <span class="validation-icon">
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                </span>
+              </div>
+              <div class="form-text"
+                >Name must be at least 3 characters and can contain spaces</div
+              >
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="bookmarkURL" class="form-label">Website URL</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookmarkURL"
+                  placeholder="Enter website URL"
+                />
+                <span class="validation-icon">
+                  <i class="fas fa-check-circle"></i>
+                  <i class="fas fa-exclamation-circle"></i>
+                </span>
+              </div>
+              <div class="form-text"
+                >Enter full URL (https://example.com) or domain name only</div
+              >
+            </div>
+          </div>
+
+          <button
+            type="button"
+            id="submitBtn"
+            class="btn btn-primary btn-lg mt-3"
+          >
+            <i class="fas fa-plus me-2"></i>Add Website
+          </button>
+        </form>
+      </div>
+
+      <div class="bookmarks-section">
+        <h2 class="mb-4"><i class="fas fa-bookmark me-2"></i>Saved Websites</h2>
+
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th width="10%">#</th>
+                <th width="30%">Website Name</th>
+                <th width="30%">Website URL</th>
+                <th width="30%">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tableContent"> </tbody>
+          </table>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+          <i class="fas fa-book-open"></i>
+          <h3>No bookmarks yet</h3>
+          <p>Start by adding some websites to your list</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"
+              ><i class="fas fa-exclamation-triangle me-2"></i>Input Error</h5
+            >
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Please fill all fields correctly before adding a website.</p>
+            <ul>
+              <li>Website name must be at least 3 characters long</li>
+              <li>Website URL must be valid</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              >Okay</button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

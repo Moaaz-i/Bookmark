@@ -1,0 +1,192 @@
+:root {
+  --primary-color: #4e54c8;
+  --secondary-color: #8f94fb;
+  --accent-color: #ff6b6b;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+}
+
+body {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark-color);
+}
+
+.main-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.app-header {
+  margin-top: 0.7rem;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.app-header h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.app-header p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.form-section {
+  padding: 2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.bookmarks-section {
+  padding: 1rem 0px;
+}
+
+.table-responsive {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+table {
+  margin-bottom: 0;
+}
+
+thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+th {
+  font-weight: 600;
+  padding: 1rem !important;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-visit {
+  background-color: #20c997;
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn-visit:hover {
+  background-color: #199d75;
+  color: white;
+}
+
+.btn-delete {
+  background-color: var(--accent-color);
+  color: white;
+  transition: all 0.3s;
+}
+
+.btn-delete:hover {
+  background-color: #ec3948;
+  color: white;
+}
+
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(78, 84, 200, 0.25);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.empty-state i {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #ced4da;
+}
+
+.validation-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.is-valid + .validation-icon .bi-check-circle-fill {
+  display: inline;
+  color: #198754;
+}
+
+.is-invalid + .validation-icon .bi-exclamation-circle-fill {
+  display: inline;
+  color: #dc3545;
+}
+
+.input-group {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-section,
+  .bookmarks-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .main-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+  }
+}
