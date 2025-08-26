@@ -58,10 +58,10 @@ function renderBookmarks(): void {
         <td>${fixedURL}</td>
         <td>
           <div class="d-flex flex-column flex-md-row justify-content-center align-items-center justify-content-lg-start gap-2">
-            <button class="btn btn-visit me-2" data-index="${index}">
+            <button class="btn btn-visit me-2 d-flex flex-row align-items-center" data-index="${index}">
               <i class="fas fa-eye me-1"></i>Visit
             </button>
-            <button class="btn btn-delete" data-index="${index}">
+            <button class="btn btn-delete d-flex flex-row align-items-center" data-index="${index}">
               <i class="fas fa-trash-alt me-1"></i>Delete
             </button>
           </div>
